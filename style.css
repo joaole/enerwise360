@@ -113,12 +113,16 @@ h3 {
 }
 
 .banner {
-    height: 100vh; /* Mantém a altura */
-    background: url('hero.png') center/cover no-repeat; /* Define a nova imagem de fundo */
+    height: 100vh;
+    /* Mantém a altura */
+    background: url('hero.png') center/cover no-repeat;
+    /* Define a nova imagem de fundo */
     color: white;
     display: flex;
-    align-items: center; /* Centraliza o conteúdo no eixo Y */
-    justify-content: center; /* Centraliza o conteúdo no eixo X */
+    align-items: center;
+    /* Centraliza o conteúdo no eixo Y */
+    justify-content: center;
+    /* Centraliza o conteúdo no eixo X */
     position: relative;
 }
 
@@ -129,17 +133,21 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Sobreposição escura */
+    background: rgba(0, 0, 0, 0.2);
+    /* Sobreposição escura */
     z-index: 1;
 }
 
 .banner-content {
     z-index: 2;
-    width: 80%; /* Define que o conteúdo ocupa 80% da largura do banner */
-    background: rgba(0, 0, 0, 0.6); /* Fundo escuro translúcido para o conteúdo */
+    width: 80%;
+    /* Define que o conteúdo ocupa 80% da largura do banner */
+    background: rgba(0, 0, 0, 0.6);
+    /* Fundo escuro translúcido para o conteúdo */
     padding: 30px;
     border-radius: 10px;
-    text-align: center; /* Centraliza o texto dentro do bloco */
+    text-align: center;
+    /* Centraliza o texto dentro do bloco */
 }
 
 .banner h1 {
@@ -160,7 +168,8 @@ h3 {
     color: white;
     font-weight: bold;
     transition: background 0.3s ease;
-    text-decoration: none; /* Remove o sublinhado */
+    text-decoration: none;
+    /* Remove o sublinhado */
 }
 
 .btn-primary:hover {
@@ -169,10 +178,12 @@ h3 {
 
 
 .highlights {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Gradiente sutil */
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    /* Gradiente sutil */
     padding: 80px 20px;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Tipografia moderna */
+    font-family: 'Poppins', sans-serif;
+    /* Tipografia moderna */
 }
 
 .highlights h2 {
@@ -183,10 +194,14 @@ h3 {
 }
 
 .cards {
-    display: grid; /* Define o layout em grade */
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas com tamanhos iguais */
-    gap: 20px; /* Espaçamento entre os cards */
-    justify-items: center; /* Centraliza os cards horizontalmente */
+    display: grid;
+    /* Define o layout em grade */
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria 3 colunas com tamanhos iguais */
+    gap: 20px;
+    /* Espaçamento entre os cards */
+    justify-items: center;
+    /* Centraliza os cards horizontalmente */
 }
 
 .card {
@@ -194,26 +209,32 @@ h3 {
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 100%; /* Garante que o card ocupe toda a coluna */
-    max-width: 300px; /* Limita a largura dos cards */
+    width: 100%;
+    /* Garante que o card ocupe toda a coluna */
+    max-width: 300px;
+    /* Limita a largura dos cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center;
+    /* Centraliza o conteúdo */
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Eleva o card */
+    transform: translateY(-10px);
+    /* Eleva o card */
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
 }
 
 .card-img {
     width: 100%;
-    height: 180px; /* Tamanho fixo para uniformidade */
+    height: 180px;
+    /* Tamanho fixo para uniformidade */
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .card:hover .card-img {
-    transform: scale(1.1); /* Amplia a imagem no hover */
+    transform: scale(1.1);
+    /* Amplia a imagem no hover */
 }
 
 .card-content {
@@ -253,145 +274,110 @@ h3 {
 }
 
 /* como funciona */
+/* Timeline Section */
+.timeline {
+    position: relative;
+    margin-top: 40px;
+    padding-left: 40px;
+}
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(180deg, #198754, #0d6efd); /* Linha vertical elegante */
+    border-radius: 5px;
+}
+
+.timeline-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background: #0d6efd;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.8rem;
+    color: #198754;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.step-content p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.8;
+}
+
+/* Adicione um fundo elegante à seção */
 .enerwise-section {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Fundo moderno */
+    background: radial-gradient(circle at center, #f8f9fa 60%, #e9ecef);
     padding: 60px 20px;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
 .enerwise-section h2 {
     font-size: 2.5rem;
-    color: #0d6efd;
-    margin-bottom: 30px;
+    color: #198754;
+    margin-bottom: 20px;
     font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .enerwise-section p {
     font-size: 1.2rem;
     color: #6c757d;
-    line-height: 1.8;
     margin-bottom: 40px;
 }
 
-.integration {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 0;
+    }
 
-.element {
-    flex: 1;
-    max-width: 30%;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
+    .timeline-step {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
 
-.element img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.element h3 {
-    font-size: 1.5rem;
-    color: #198754;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.element p {
-    font-size: 1rem;
-    color: #6c757d;
-    line-height: 1.6;
-}
-
-.element:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.process-flow {
-    margin-top: 40px;
-    text-align: left;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.process-flow h3 {
-    font-size: 1.8rem;
-    color: #198754;
-    margin-bottom: 20px;
-}
-
-.process-flow ul {
-    list-style: none;
-    padding: 0;
-}
-
-.process-flow ul li {
-    font-size: 1rem;
-    color: #6c757d;
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-}
-
-.process-flow ul li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #198754;
-    font-weight: bold;
-}
-
-.results {
-    margin-top: 40px;
-}
-
-.results h3 {
-    font-size: 1.8rem;
-    color: #198754;
-    margin-bottom: 20px;
-}
-
-.benefits {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.benefit {
-    flex: 1;
-    max-width: 30%;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.benefit h4 {
-    font-size: 1.3rem;
-    color: #0d6efd;
-    margin-bottom: 10px;
-}
-
-.benefit p {
-    font-size: 1rem;
-    color: #6c757d;
-    line-height: 1.6;
+    .timeline-step::before {
+        display: none;
+    }
 }
 
 
