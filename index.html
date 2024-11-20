@@ -11,9 +11,10 @@
 <body>
     <!-- Cabeçalho -->
     <header class="header">
-        <div class="container">
+        <div class="header">
             <div class="logo">EnerWise 360</div>
             <nav class="nav">
+                <button class="nav-toggle">☰</button>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#solucoes">Soluções</a></li>
@@ -24,6 +25,7 @@
             </nav>
             <a href="#contato" class="btn-demo">Teste Agora</a>
         </div>
+
     </header>
 
     <!-- Banner Principal -->
@@ -73,7 +75,7 @@
     <!-- como-funciona -->
     <section id="como-funciona" class="enerwise-section">
         <div class="container-noflex">
-            <h2>Como Funciona o EnerWise 360</h2>
+            <h2>Como o EnerWise 360 Funciona</h2>
             <p>
                 Descubra como o <strong>EnerWise 360</strong> une tecnologia e sustentabilidade para transformar
                 operações logísticas.
@@ -135,18 +137,47 @@
             </div>
         </div>
     </section>
-
     <!-- Sustentabilidade -->
     <section id="sustentabilidade" class="sustainability">
         <div class="container-noflex">
-            <h2>Compromisso com a Sustentabilidade</h2>
-            <p>Capacitar operações logísticas para um futuro mais verde e eficiente.</p>
-            <div class="case">
-                <h3>Case de Sucesso</h3>
-                <p>Como ajudamos uma rede de armazéns a reduzir 30% de suas emissões de carbono.</p>
+            <h2>Nosso Compromisso com a Sustentabilidade</h2>
+            <p class="subtitle">Transformando o progresso econômico em uma força positiva para o planeta.</p>
+
+            <!-- Missão, Visão e Valores -->
+            <div class="mv-section">
+                <div class="mv-item">
+                    <h3>Missão</h3>
+                    <p>Capacitar empresas a alcançarem eficiência energética e inovação sustentável, promovendo um
+                        futuro mais limpo e próspero.</p>
+                </div>
+                <div class="mv-item">
+                    <h3>Visão</h3>
+                    <p>Ser a principal referência global em tecnologia sustentável, integrando crescimento econômico e
+                        preservação ambiental.</p>
+                </div>
+                <div class="mv-item">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><strong>Inovação:</strong> Criamos soluções pioneiras.</li>
+                        <li><strong>Sustentabilidade:</strong> Prioridade para o futuro.</li>
+                        <li><strong>Ética:</strong> Transparência em todas as ações.</li>
+                        <li><strong>Impacto Positivo:</strong> Progresso com responsabilidade.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Progresso Econômico -->
+            <div class="economic-focus">
+                <h3>Progresso Econômico com Sustentabilidade</h3>
+                <p>
+                    Unimos tecnologia de ponta e compromisso ambiental para ajudar negócios a crescerem de forma
+                    consciente. O <strong>EnerWise 360</strong> é a chave para transformar eficiência em crescimento,
+                    sem comprometer o futuro.
+                </p>
             </div>
         </div>
     </section>
+
 
     <!-- Contato -->
     <section id="contato" class="contact">
@@ -173,6 +204,15 @@
             </div>
         </div>
     </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav ul');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
 </body>
 
 </html>

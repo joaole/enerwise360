@@ -421,34 +421,123 @@ h3 {
 
 /* Sustentabilidade */
 .sustainability {
-    background: #e9ecef;
-    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 80px 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+
 
 .sustainability h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #198754;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
 }
 
-.case {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+.sustainability .subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    font-style: italic;
 }
 
-.case h3 {
+.mv-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.mv-item {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mv-item h3 {
     font-size: 1.8rem;
     color: #0d6efd;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.case p {
+.mv-item p,
+.mv-item ul {
     font-size: 1rem;
     color: #6c757d;
+    line-height: 1.6;
+}
+
+.mv-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mv-item ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.mv-item ul li::before {
+    content: '✔';
+    color: #198754;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.economic-focus {
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+.economic-focus h3 {
+    font-size: 2rem;
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.economic-focus p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    line-height: 1.8;
+}
+
+.sustainability::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -10%;
+    width: 120%;
+    height: 200px;
+    background: linear-gradient(to right, #0d6efd, #198754);
+    transform: rotate(3deg);
+    z-index: 1;
+    padding-top: 50px;
 }
 
 /* Contato */
@@ -510,4 +599,149 @@ button:hover {
 
 .footer .social a:hover {
     color: #d1e7dd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Ajuste do Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .btn-demo {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    /* Ajuste do Banner */
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /* Ajuste das Soluções */
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline-step {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .timeline-step::before {
+        display: none;
+    }
+
+    /* Benefícios */
+    .benefit-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .benefit-card {
+        width: 100%;
+    }
+
+    /* Sustentabilidade */
+    .mv-section {
+        grid-template-columns: 1fr;
+    }
+
+    .economic-focus {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    /* Contato */
+    .contact form {
+        gap: 10px;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 0.9rem;
+    }
+
+    /* Rodapé */
+    .footer {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajuste do Header para telas ainda menores */
+    .header {
+        align-items: center;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: #0d6efd;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .btn-demo {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajuste das Soluções */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Benefícios */
+    .benefit-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .benefit-card {
+        width: 100%;
+    }
+
+    /* Sustentabilidade */
+    .mv-section {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-item {
+        padding: 15px;
+    }
 }
