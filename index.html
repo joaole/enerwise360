@@ -11,8 +11,11 @@
 <body>
     <!-- Cabeçalho -->
     <header class="header">
+        <div class="top-bar"></div> <!-- Contêiner superior com fundo colorido -->
         <div class="container">
-            <div class="logo">EnerWise 360</div>
+            <div class="logo">
+                <img src="logo_enerwise_semfundo.png" alt="logo">
+            </div>
             <nav class="nav">
                 <button class="nav-toggle">☰</button> <!-- Botão Toggle -->
                 <ul>
@@ -26,6 +29,7 @@
             <a href="https://enerwise360.streamlit.app/" class="btn-demo">Teste Agora</a>
         </div>
     </header>
+
 
 
     <!-- Banner Principal -->
@@ -202,12 +206,12 @@
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav ul');
-    
+
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active'); // Alternar a visibilidade do menu
         });
     </script>
-    
+
 
 </body>
 
